@@ -1,0 +1,871 @@
+##########################################################################
+#                                                                        #
+#  Licensed Materials - Property of IBM                                  #
+#                                                                        #
+#  "Restricted Materials of IBM"                                         #
+#                                                                        #
+#  IBM Informix GLS                                                      #
+#  (c) Copyright IBM Corporation 1996, 2004 All rights reserved.         #
+#                                                                        #
+##########################################################################
+<operating_system>  "winnt351"
+<source_version>		100
+<modified_date>		"05-04-2004"
+
+
+
+LC_CTYPE
+
+#
+# Unclassified Codepoints
+# (all codepoints which are legal, but not classified)
+#
+
+
+
+#
+# Upper-case Alphabetic Characters
+#
+upper \x41;...;\x5a;\
+      \x8a;\
+      \x8c;\
+      \x9f;\
+      \xc0;...;\xd6;\
+      \xd8;...;\xde
+
+#
+# Lower-case Alphabetic Characters
+#
+lower \x61;...;\x7a;\
+      \x83;\
+      \x9a;\
+      \x9c;\
+      \xdf;...;\xf6;\
+      \xf8;...;\xff
+
+#
+# Alphabetic Characters with No Case
+#
+
+
+#
+# Decimal Digit Characters
+# (should only contain <zero>...<nine>)
+#
+digit \x30;...;\x39;\
+      \xb2;\
+      \xb3;\
+      \xb9
+
+#
+# Hexadecimal Digit Characters
+# (should only contain <zero>...<nine>, <A>...<F> and <a>...<f>)
+#
+xdigit \x30;...;\x39;\
+       \x41;...;\x46;\
+       \x61;...;\x66
+
+#
+# Punctuation Characters
+#
+punct \x21;...;\x2f;\
+      \x3a;...;\x40;\
+      \x5b;...;\x60;\
+      \x7b;...;\x7e;\
+      \x82;...;\x89;\
+      \x8b;\
+      \x91;...;\x99;\
+      \x9b;\
+      \xa1;...;\xbf;\
+      \xd7;\
+      \xf7
+
+#
+# Horizontal Space Characters
+#
+blank \x09;\
+      \x20;\
+      \xa0
+
+#
+# Vertical and Horizontal Space Characters
+# (since the 'blank' class is automatically included in the 'space' class,
+#  only the space characters that are not in the 'blank' class need
+#  to be specified here)
+#
+space \x0a;...;\x0d
+
+#
+# Control Characters
+#
+cntrl \x00;...;\x1f;\
+      \x7f;...;\x81;\
+      \x8d;...;\x90;\
+      \x9d;\
+      \x9e
+
+#
+# Graphic Characters
+# (since the 'upper', 'lower', 'alpha', 'digit', 'punct' and 'xdigit'
+#  classes are automatically included in the 'graph' class,
+#  only the graphic characters that are not in these classes
+#  need to be specified here)
+#
+
+
+#
+# Printable Characters
+# (since the 'upper', 'lower', 'alpha', 'digit', 'punct' and 'xdigit'
+#  classes are automatically included in the 'print' class,
+#  only the printable characters that are not in these classes
+#  need to be specified here)
+#
+print \x09;\
+      \x20;\
+      \xa0
+
+#
+# Alphabetic Lower-case to Upper-case Conversion
+#
+toupper (\x61,\x41);(\x62,\x42);(\x63,\x43);(\x64,\x44);(\x65,\x45);\
+        (\x66,\x46);(\x67,\x47);(\x68,\x48);(\x69,\x49);(\x6a,\x4a);\
+        (\x6b,\x4b);(\x6c,\x4c);(\x6d,\x4d);(\x6e,\x4e);(\x6f,\x4f);\
+        (\x70,\x50);(\x71,\x51);(\x72,\x52);(\x73,\x53);(\x74,\x54);\
+        (\x75,\x55);(\x76,\x56);(\x77,\x57);(\x78,\x58);(\x79,\x59);\
+        (\x7a,\x5a);(\x9a,\x8a);(\x9c,\x8c);(\xe0,\xc0);(\xe1,\xc1);\
+        (\xe2,\xc2);(\xe3,\xc3);(\xe4,\xc4);(\xe5,\xc5);(\xe6,\xc6);\
+        (\xe7,\xc7);(\xe8,\xc8);(\xe9,\xc9);(\xea,\xca);(\xeb,\xcb);\
+        (\xec,\xcc);(\xed,\xcd);(\xee,\xce);(\xef,\xcf);(\xf0,\xd0);\
+        (\xf1,\xd1);(\xf2,\xd2);(\xf3,\xd3);(\xf4,\xd4);(\xf5,\xd5);\
+        (\xf6,\xd6);(\xf8,\xd8);(\xf9,\xd9);(\xfa,\xda);(\xfb,\xdb);\
+        (\xfc,\xdc);(\xfd,\xdd);(\xfe,\xde);(\xff,\x9f)
+
+#
+# Alphabetic Upper-case to Lower-case Conversion
+#
+tolower (\x41,\x61);(\x42,\x62);(\x43,\x63);(\x44,\x64);(\x45,\x65);\
+        (\x46,\x66);(\x47,\x67);(\x48,\x68);(\x49,\x69);(\x4a,\x6a);\
+        (\x4b,\x6b);(\x4c,\x6c);(\x4d,\x6d);(\x4e,\x6e);(\x4f,\x6f);\
+        (\x50,\x70);(\x51,\x71);(\x52,\x72);(\x53,\x73);(\x54,\x74);\
+        (\x55,\x75);(\x56,\x76);(\x57,\x77);(\x58,\x78);(\x59,\x79);\
+        (\x5a,\x7a);(\x8a,\x9a);(\x8c,\x9c);(\x9f,\xff);(\xc0,\xe0);\
+        (\xc1,\xe1);(\xc2,\xe2);(\xc3,\xe3);(\xc4,\xe4);(\xc5,\xe5);\
+        (\xc6,\xe6);(\xc7,\xe7);(\xc8,\xe8);(\xc9,\xe9);(\xca,\xea);\
+        (\xcb,\xeb);(\xcc,\xec);(\xcd,\xed);(\xce,\xee);(\xcf,\xef);\
+        (\xd0,\xf0);(\xd1,\xf1);(\xd2,\xf2);(\xd3,\xf3);(\xd4,\xf4);\
+        (\xd5,\xf5);(\xd6,\xf6);(\xd8,\xf8);(\xd9,\xf9);(\xda,\xfa);\
+        (\xdb,\xfb);(\xdc,\xfc);(\xdd,\xfd);(\xde,\xfe)
+
+END LC_CTYPE
+
+
+LC_NUMERIC
+
+decimal_point		"."
+thousands_sep		","
+grouping		3
+num_positive_sign	""
+num_negative_sign	"-"
+
+END LC_NUMERIC
+
+
+LC_MONETARY
+
+int_curr_symbol		"USD"
+currency_symbol		"$"
+mon_decimal_point	"."
+mon_thousands_sep	","
+mon_grouping		3
+positive_sign		""
+negative_sign		"-"
+int_frac_digits		2
+frac_digits		2
+p_cs_precedes		1
+n_cs_precedes		1
+p_sep_by_space		0
+n_sep_by_space		0
+p_sign_posn		3
+n_sign_posn		0
+
+END LC_MONETARY
+
+
+LC_TIME
+
+
+# FROM strftime
+abday		"Sun";\
+		"Mon";\
+		"Tue";\
+		"Wed";\
+		"Thu";\
+		"Fri";\
+		"Sat"
+
+# FROM strftime
+day		"Sunday";\
+		"Monday";\
+		"Tuesday";\
+		"Wednesday";\
+		"Thursday";\
+		"Friday";\
+		"Saturday"
+
+# FROM strftime
+abmon		"Jan";\
+		"Feb";\
+		"Mar";\
+		"Apr";\
+		"May";\
+		"Jun";\
+		"Jul";\
+		"Aug";\
+		"Sep";\
+		"Oct";\
+		"Nov";\
+		"Dec"
+
+# FROM strftime
+mon		"January";\
+		"February";\
+		"March";\
+		"April";\
+		"May";\
+		"June";\
+		"July";\
+		"August";\
+		"September";\
+		"October";\
+		"November";\
+		"December"
+
+# FROM strftime
+am_pm		"AM";"PM"
+
+
+
+# FROM strftime
+# Sample date: Monday April 5th 06:09:08 AM 1903, the 7th day of the year
+# strftime("%x") = "04/05/03"
+d_fmt		"%m/%d/%y"
+
+# FROM strftime
+# Sample date: Monday April 5th 06:09:08 AM 1903, the 7th day of the year
+# strftime("%X") = "06:09:08"
+t_fmt		"%I:%M:%S"
+
+# FROM strftime
+# Sample date: Monday April 5th 06:09:08 AM 1903, the 7th day of the year
+# strftime("%c") = "04/05/03 06:09:08"
+d_t_fmt		"%m/%d/%y %I:%M:%S"
+
+# FROM strftime
+# Sample date: Monday April 5th 06:09:08 AM 1903, the 7th day of the year
+# strftime("%r") = ""
+t_fmt_ampm	""
+END LC_TIME
+
+
+
+LC_COLLATE
+
+collating-symbol <Weight_0>
+collating-symbol <Weight_3>
+collating-symbol <Weight_14>
+collating-symbol <Weight_15>
+collating-symbol <Weight_18>
+collating-symbol <Weight_19>
+collating-symbol <Weight_20>
+collating-symbol <Weight_25>
+collating-symbol <Weight_26>
+collating-symbol <Weight_28>
+collating-symbol <Weight_33>
+collating-symbol <Weight_104>
+collating-symbol <Weight_123>
+collating-symbol <Weight_1794>
+collating-symbol <Weight_1796>
+collating-symbol <Weight_1797>
+collating-symbol <Weight_1798>
+collating-symbol <Weight_1799>
+collating-symbol <Weight_1800>
+collating-symbol <Weight_1801>
+collating-symbol <Weight_1820>
+collating-symbol <Weight_1821>
+collating-symbol <Weight_1823>
+collating-symbol <Weight_1825>
+collating-symbol <Weight_1827>
+collating-symbol <Weight_1829>
+collating-symbol <Weight_1831>
+collating-symbol <Weight_1834>
+collating-symbol <Weight_1837>
+collating-symbol <Weight_1839>
+collating-symbol <Weight_1843>
+collating-symbol <Weight_1845>
+collating-symbol <Weight_1847>
+collating-symbol <Weight_1850>
+collating-symbol <Weight_1852>
+collating-symbol <Weight_1854>
+collating-symbol <Weight_1855>
+collating-symbol <Weight_1857>
+collating-symbol <Weight_1858>
+collating-symbol <Weight_1859>
+collating-symbol <Weight_1860>
+collating-symbol <Weight_1864>
+collating-symbol <Weight_1866>
+collating-symbol <Weight_1868>
+collating-symbol <Weight_1870>
+collating-symbol <Weight_1872>
+collating-symbol <Weight_1873>
+collating-symbol <Weight_1874>
+collating-symbol <Weight_1875>
+collating-symbol <Weight_1876>
+collating-symbol <Weight_1877>
+collating-symbol <Weight_1878>
+collating-symbol <Weight_1879>
+collating-symbol <Weight_1885>
+collating-symbol <Weight_1913>
+collating-symbol <Weight_1914>
+collating-symbol <Weight_1915>
+collating-symbol <Weight_1917>
+collating-symbol <Weight_1918>
+collating-symbol <Weight_1919>
+collating-symbol <Weight_1928>
+collating-symbol <Weight_1929>
+collating-symbol <Weight_2051>
+collating-symbol <Weight_2062>
+collating-symbol <Weight_2066>
+collating-symbol <Weight_2068>
+collating-symbol <Weight_2071>
+collating-symbol <Weight_2072>
+collating-symbol <Weight_2074>
+collating-symbol <Weight_2076>
+collating-symbol <Weight_2077>
+collating-symbol <Weight_2562>
+collating-symbol <Weight_2563>
+collating-symbol <Weight_2564>
+collating-symbol <Weight_2565>
+collating-symbol <Weight_2566>
+collating-symbol <Weight_2567>
+collating-symbol <Weight_2568>
+collating-symbol <Weight_2569>
+collating-symbol <Weight_2570>
+collating-symbol <Weight_2571>
+collating-symbol <Weight_2572>
+collating-symbol <Weight_2573>
+collating-symbol <Weight_2575>
+collating-symbol <Weight_2576>
+collating-symbol <Weight_2577>
+collating-symbol <Weight_2581>
+collating-symbol <Weight_2582>
+collating-symbol <Weight_3075>
+collating-symbol <Weight_3093>
+collating-symbol <Weight_3097>
+collating-symbol <Weight_3101>
+collating-symbol <Weight_3105>
+collating-symbol <Weight_3123>
+collating-symbol <Weight_3142>
+collating-symbol <Weight_3160>
+collating-symbol <Weight_3178>
+collating-symbol <Weight_3197>
+collating-symbol <Weight_3216>
+collating-symbol <Weight_3234>
+collating-symbol <Weight_3252>
+collating-symbol <Weight_3586>
+collating-symbol <Weight_3593>
+collating-symbol <Weight_3594>
+collating-symbol <Weight_3610>
+collating-symbol <Weight_3617>
+collating-symbol <Weight_3619>
+collating-symbol <Weight_3621>
+collating-symbol <Weight_3628>
+collating-symbol <Weight_3634>
+collating-symbol <Weight_3637>
+collating-symbol <Weight_3638>
+collating-symbol <Weight_3656>
+collating-symbol <Weight_3665>
+collating-symbol <Weight_3696>
+collating-symbol <Weight_3708>
+collating-symbol <Weight_3710>
+collating-symbol <Weight_3721>
+collating-symbol <Weight_3722>
+collating-symbol <Weight_3729>
+collating-symbol <Weight_3737>
+collating-symbol <Weight_3740>
+collating-symbol <Weight_3743>
+collating-symbol <Weight_3746>
+collating-symbol <Weight_3748>
+collating-symbol <Weight_3750>
+collating-symbol <Weight_3751>
+collating-symbol <Weight_3753>
+collating-symbol <Weight_2147943939>
+collating-symbol <Weight_2147943940>
+collating-symbol <Weight_2147943941>
+collating-symbol <Weight_2147943942>
+collating-symbol <Weight_2147943943>
+collating-symbol <Weight_2147943944>
+collating-symbol <Weight_2147943945>
+collating-symbol <Weight_2147943946>
+collating-symbol <Weight_2147943947>
+collating-symbol <Weight_2147943948>
+collating-symbol <Weight_2147943949>
+collating-symbol <Weight_2147943950>
+collating-symbol <Weight_2147943951>
+collating-symbol <Weight_2147943952>
+collating-symbol <Weight_2147943953>
+collating-symbol <Weight_2147943954>
+collating-symbol <Weight_2147943955>
+collating-symbol <Weight_2147943956>
+collating-symbol <Weight_2147943957>
+collating-symbol <Weight_2147943958>
+collating-symbol <Weight_2147943959>
+collating-symbol <Weight_2147943960>
+collating-symbol <Weight_2147943961>
+collating-symbol <Weight_2147943962>
+collating-symbol <Weight_2147943963>
+collating-symbol <Weight_2147943964>
+collating-symbol <Weight_2147943965>
+collating-symbol <Weight_2147943966>
+collating-symbol <Weight_2147943967>
+collating-symbol <Weight_2147943979>
+collating-symbol <Weight_2147943980>
+collating-symbol <Weight_2147943981>
+collating-symbol <Weight_2147943982>
+collating-symbol <Weight_2147943995>
+collating-symbol <Weight_2147943996>
+collating-symbol <Weight_2147944064>
+collating-symbol <Weight_2147944066>
+collating-symbol <Weight_2147944067>
+collating-symbol <Weight_2147944073>
+collating-symbol <Weight_2147944075>
+
+order_start forward;forward;backward;forward;forward
+
+\x00
+<Weight_0>
+<Weight_3>
+<Weight_14>
+<Weight_15>
+<Weight_18>
+<Weight_19>
+<Weight_20>
+<Weight_25>
+<Weight_26>
+<Weight_28>
+<Weight_33>
+<Weight_104>
+<Weight_123>
+<Weight_1794>
+<Weight_1796>
+<Weight_1797>
+<Weight_1798>
+<Weight_1799>
+<Weight_1800>
+<Weight_1801>
+<Weight_1820>
+<Weight_1821>
+<Weight_1823>
+<Weight_1825>
+<Weight_1827>
+<Weight_1829>
+<Weight_1831>
+<Weight_1834>
+<Weight_1837>
+<Weight_1839>
+<Weight_1843>
+<Weight_1845>
+<Weight_1847>
+<Weight_1850>
+<Weight_1852>
+<Weight_1854>
+<Weight_1855>
+<Weight_1857>
+<Weight_1858>
+<Weight_1859>
+<Weight_1860>
+<Weight_1864>
+<Weight_1866>
+<Weight_1868>
+<Weight_1870>
+<Weight_1872>
+<Weight_1873>
+<Weight_1874>
+<Weight_1875>
+<Weight_1876>
+<Weight_1877>
+<Weight_1878>
+<Weight_1879>
+<Weight_1885>
+<Weight_1913>
+<Weight_1914>
+<Weight_1915>
+<Weight_1917>
+<Weight_1918>
+<Weight_1919>
+<Weight_1928>
+<Weight_1929>
+<Weight_2051>
+<Weight_2062>
+<Weight_2066>
+<Weight_2068>
+<Weight_2071>
+<Weight_2072>
+<Weight_2074>
+<Weight_2076>
+<Weight_2077>
+<Weight_2562>
+<Weight_2563>
+<Weight_2564>
+<Weight_2565>
+<Weight_2566>
+<Weight_2567>
+<Weight_2568>
+<Weight_2569>
+<Weight_2570>
+<Weight_2571>
+<Weight_2572>
+<Weight_2573>
+<Weight_2575>
+<Weight_2576>
+<Weight_2577>
+<Weight_2581>
+<Weight_2582>
+<Weight_3075>
+<Weight_3093>
+<Weight_3097>
+<Weight_3101>
+<Weight_3105>
+<Weight_3123>
+<Weight_3142>
+<Weight_3160>
+<Weight_3178>
+<Weight_3197>
+<Weight_3216>
+<Weight_3234>
+<Weight_3252>
+<Weight_3586>
+<Weight_3593>
+<Weight_3594>
+<Weight_3610>
+<Weight_3617>
+<Weight_3619>
+<Weight_3621>
+<Weight_3628>
+<Weight_3634>
+<Weight_3637>
+<Weight_3638>
+<Weight_3656>
+<Weight_3665>
+<Weight_3696>
+<Weight_3708>
+<Weight_3710>
+<Weight_3721>
+<Weight_3722>
+<Weight_3729>
+<Weight_3737>
+<Weight_3740>
+<Weight_3743>
+<Weight_3746>
+<Weight_3748>
+<Weight_3750>
+<Weight_3751>
+<Weight_3753>
+<Weight_2147943939>
+<Weight_2147943940>
+<Weight_2147943941>
+<Weight_2147943942>
+<Weight_2147943943>
+<Weight_2147943944>
+<Weight_2147943945>
+<Weight_2147943946>
+<Weight_2147943947>
+<Weight_2147943948>
+<Weight_2147943949>
+<Weight_2147943950>
+<Weight_2147943951>
+<Weight_2147943952>
+<Weight_2147943953>
+<Weight_2147943954>
+<Weight_2147943955>
+<Weight_2147943956>
+<Weight_2147943957>
+<Weight_2147943958>
+<Weight_2147943959>
+<Weight_2147943960>
+<Weight_2147943961>
+<Weight_2147943962>
+<Weight_2147943963>
+<Weight_2147943964>
+<Weight_2147943965>
+<Weight_2147943966>
+<Weight_2147943967>
+<Weight_2147943979>
+<Weight_2147943980>
+<Weight_2147943981>
+<Weight_2147943982>
+<Weight_2147943995>
+<Weight_2147943996>
+<Weight_2147944064>
+<Weight_2147944066>
+<Weight_2147944067>
+<Weight_2147944073>
+<Weight_2147944075>
+
+\x01	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943939>
+\x02	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943940>
+\x03	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943941>
+\x04	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943942>
+\x05	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943943>
+\x06	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943944>
+\x07	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943945>
+\x08	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943946>
+\x09	<Weight_1797>;IGNORE;IGNORE;IGNORE;IGNORE
+\x0a	<Weight_1798>;IGNORE;IGNORE;IGNORE;IGNORE
+\x0b	<Weight_1799>;IGNORE;IGNORE;IGNORE;IGNORE
+\x0c	<Weight_1800>;IGNORE;IGNORE;IGNORE;IGNORE
+\x0d	<Weight_1801>;IGNORE;IGNORE;IGNORE;IGNORE
+\x0e	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943947>
+\x0f	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943948>
+\x10	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943949>
+\x11	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943950>
+\x12	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943951>
+\x13	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943952>
+\x14	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943953>
+\x15	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943954>
+\x16	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943955>
+\x17	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943956>
+\x18	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943957>
+\x19	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943958>
+\x1a	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943959>
+\x1b	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943960>
+\x1c	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943961>
+\x1d	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943962>
+\x1e	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943963>
+\x1f	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943964>
+\x20	<Weight_1794>;IGNORE;IGNORE;IGNORE;IGNORE
+\x21	<Weight_1820>;IGNORE;IGNORE;IGNORE;IGNORE
+\x22	<Weight_1821>;IGNORE;IGNORE;IGNORE;IGNORE
+\x23	<Weight_1823>;IGNORE;IGNORE;IGNORE;IGNORE
+\x24	<Weight_1825>;IGNORE;IGNORE;IGNORE;IGNORE
+\x25	<Weight_1827>;IGNORE;IGNORE;IGNORE;IGNORE
+\x26	<Weight_1829>;IGNORE;IGNORE;IGNORE;IGNORE
+\x27	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147944064>
+\x28	<Weight_1831>;IGNORE;IGNORE;IGNORE;IGNORE
+\x29	<Weight_1834>;IGNORE;IGNORE;IGNORE;IGNORE
+\x2a	<Weight_1837>;IGNORE;IGNORE;IGNORE;IGNORE
+\x2b	<Weight_2051>;IGNORE;IGNORE;IGNORE;IGNORE
+\x2c	<Weight_1839>;IGNORE;IGNORE;IGNORE;IGNORE
+\x2d	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147944066>
+\x2e	<Weight_1843>;IGNORE;IGNORE;IGNORE;IGNORE
+\x2f	<Weight_1845>;IGNORE;IGNORE;IGNORE;IGNORE
+\x30	<Weight_3075>;IGNORE;IGNORE;IGNORE;IGNORE
+\x31	<Weight_3105>;IGNORE;IGNORE;IGNORE;IGNORE
+\x32	<Weight_3123>;IGNORE;IGNORE;IGNORE;IGNORE
+\x33	<Weight_3142>;IGNORE;IGNORE;IGNORE;IGNORE
+\x34	<Weight_3160>;IGNORE;IGNORE;IGNORE;IGNORE
+\x35	<Weight_3178>;IGNORE;IGNORE;IGNORE;IGNORE
+\x36	<Weight_3197>;IGNORE;IGNORE;IGNORE;IGNORE
+\x37	<Weight_3216>;IGNORE;IGNORE;IGNORE;IGNORE
+\x38	<Weight_3234>;IGNORE;IGNORE;IGNORE;IGNORE
+\x39	<Weight_3252>;IGNORE;IGNORE;IGNORE;IGNORE
+\x3a	<Weight_1847>;IGNORE;IGNORE;IGNORE;IGNORE
+\x3b	<Weight_1850>;IGNORE;IGNORE;IGNORE;IGNORE
+\x3c	<Weight_2062>;IGNORE;IGNORE;IGNORE;IGNORE
+\x3d	<Weight_2066>;IGNORE;IGNORE;IGNORE;IGNORE
+\x3e	<Weight_2068>;IGNORE;IGNORE;IGNORE;IGNORE
+\x3f	<Weight_1852>;IGNORE;IGNORE;IGNORE;IGNORE
+\x40	<Weight_1854>;IGNORE;IGNORE;IGNORE;IGNORE
+\x41	<Weight_3586>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x42	<Weight_3593>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x43	<Weight_3594>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x44	<Weight_3610>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x45	<Weight_3617>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x46	<Weight_3619>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x47	<Weight_3621>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x48	<Weight_3628>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x49	<Weight_3634>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x4a	<Weight_3637>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x4b	<Weight_3638>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x4c	<Weight_3656>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x4d	<Weight_3665>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x4e	<Weight_3696>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x4f	<Weight_3708>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x50	<Weight_3710>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x51	<Weight_3721>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x52	<Weight_3722>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x53	<Weight_3729>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x54	<Weight_3737>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x55	<Weight_3743>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x56	<Weight_3746>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x57	<Weight_3748>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x58	<Weight_3750>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x59	<Weight_3751>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x5a	<Weight_3753>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x5b	<Weight_1855>;IGNORE;IGNORE;IGNORE;IGNORE
+\x5c	<Weight_1857>;IGNORE;IGNORE;IGNORE;IGNORE
+\x5d	<Weight_1858>;IGNORE;IGNORE;IGNORE;IGNORE
+\x5e	<Weight_1859>;IGNORE;IGNORE;IGNORE;IGNORE
+\x5f	<Weight_1860>;IGNORE;IGNORE;IGNORE;IGNORE
+\x60	<Weight_1864>;IGNORE;IGNORE;IGNORE;IGNORE
+\x61	<Weight_3586>;IGNORE;IGNORE;IGNORE;IGNORE
+\x62	<Weight_3593>;IGNORE;IGNORE;IGNORE;IGNORE
+\x63	<Weight_3594>;IGNORE;IGNORE;IGNORE;IGNORE
+\x64	<Weight_3610>;IGNORE;IGNORE;IGNORE;IGNORE
+\x65	<Weight_3617>;IGNORE;IGNORE;IGNORE;IGNORE
+\x66	<Weight_3619>;IGNORE;IGNORE;IGNORE;IGNORE
+\x67	<Weight_3621>;IGNORE;IGNORE;IGNORE;IGNORE
+\x68	<Weight_3628>;IGNORE;IGNORE;IGNORE;IGNORE
+\x69	<Weight_3634>;IGNORE;IGNORE;IGNORE;IGNORE
+\x6a	<Weight_3637>;IGNORE;IGNORE;IGNORE;IGNORE
+\x6b	<Weight_3638>;IGNORE;IGNORE;IGNORE;IGNORE
+\x6c	<Weight_3656>;IGNORE;IGNORE;IGNORE;IGNORE
+\x6d	<Weight_3665>;IGNORE;IGNORE;IGNORE;IGNORE
+\x6e	<Weight_3696>;IGNORE;IGNORE;IGNORE;IGNORE
+\x6f	<Weight_3708>;IGNORE;IGNORE;IGNORE;IGNORE
+\x70	<Weight_3710>;IGNORE;IGNORE;IGNORE;IGNORE
+\x71	<Weight_3721>;IGNORE;IGNORE;IGNORE;IGNORE
+\x72	<Weight_3722>;IGNORE;IGNORE;IGNORE;IGNORE
+\x73	<Weight_3729>;IGNORE;IGNORE;IGNORE;IGNORE
+\x74	<Weight_3737>;IGNORE;IGNORE;IGNORE;IGNORE
+\x75	<Weight_3743>;IGNORE;IGNORE;IGNORE;IGNORE
+\x76	<Weight_3746>;IGNORE;IGNORE;IGNORE;IGNORE
+\x77	<Weight_3748>;IGNORE;IGNORE;IGNORE;IGNORE
+\x78	<Weight_3750>;IGNORE;IGNORE;IGNORE;IGNORE
+\x79	<Weight_3751>;IGNORE;IGNORE;IGNORE;IGNORE
+\x7a	<Weight_3753>;IGNORE;IGNORE;IGNORE;IGNORE
+\x7b	<Weight_1866>;IGNORE;IGNORE;IGNORE;IGNORE
+\x7c	<Weight_1868>;IGNORE;IGNORE;IGNORE;IGNORE
+\x7d	<Weight_1870>;IGNORE;IGNORE;IGNORE;IGNORE
+\x7e	<Weight_1872>;IGNORE;IGNORE;IGNORE;IGNORE
+\x7f	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943965>
+\x80	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943966>
+\x81	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943967>
+\x82	<Weight_1915>;IGNORE;IGNORE;IGNORE;IGNORE
+\x83	<Weight_3619>;<Weight_123>;IGNORE;IGNORE;IGNORE
+\x84	<Weight_1919>;IGNORE;IGNORE;IGNORE;IGNORE
+\x85	<Weight_2581>;IGNORE;IGNORE;IGNORE;IGNORE
+\x86	<Weight_2575>;IGNORE;IGNORE;IGNORE;IGNORE
+\x87	<Weight_2576>;IGNORE;IGNORE;IGNORE;IGNORE
+\x88	<Weight_1859>;<Weight_3>;IGNORE;IGNORE;IGNORE
+\x89	<Weight_2582>;IGNORE;IGNORE;IGNORE;IGNORE
+\x8a	<Weight_3729>;<Weight_20>;<Weight_18>;IGNORE;IGNORE
+\x8b	<Weight_1928>;IGNORE;IGNORE;IGNORE;IGNORE
+\x8c	"\x4f\x45";IGNORE;"\x41\x41";IGNORE;IGNORE
+\x8d	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943979>
+\x8e	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943980>
+\x8f	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943981>
+\x90	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943982>
+\x91	<Weight_1913>;IGNORE;IGNORE;IGNORE;IGNORE
+\x92	<Weight_1914>;IGNORE;IGNORE;IGNORE;IGNORE
+\x93	<Weight_1917>;IGNORE;IGNORE;IGNORE;IGNORE
+\x94	<Weight_1918>;IGNORE;IGNORE;IGNORE;IGNORE
+\x95	<Weight_2577>;IGNORE;IGNORE;IGNORE;IGNORE
+\x96	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147944073>
+\x97	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147944075>
+\x98	<Weight_1885>;IGNORE;IGNORE;IGNORE;IGNORE
+\x99	<Weight_3740>;IGNORE;<Weight_18>;IGNORE;IGNORE
+\x9a	<Weight_3729>;<Weight_20>;IGNORE;IGNORE;IGNORE
+\x9b	<Weight_1929>;IGNORE;IGNORE;IGNORE;IGNORE
+\x9c	"\x4f\x45";IGNORE;IGNORE;IGNORE;IGNORE
+\x9d	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943995>
+\x9e	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147943996>
+\x9f	<Weight_3751>;<Weight_19>;<Weight_18>;IGNORE;IGNORE
+\xa0	<Weight_1796>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa1	<Weight_1873>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa2	<Weight_2562>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa3	<Weight_2563>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa4	<Weight_2564>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa5	<Weight_2565>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa6	<Weight_1874>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa7	<Weight_2566>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa8	<Weight_1875>;IGNORE;IGNORE;IGNORE;IGNORE
+\xa9	<Weight_2567>;IGNORE;IGNORE;IGNORE;IGNORE
+\xaa	<Weight_3586>;<Weight_3>;<Weight_14>;IGNORE;IGNORE
+\xab	<Weight_2072>;IGNORE;IGNORE;IGNORE;IGNORE
+\xac	<Weight_2568>;IGNORE;IGNORE;IGNORE;IGNORE
+\xad	IGNORE;IGNORE;IGNORE;IGNORE;<Weight_2147944067>
+\xae	<Weight_2569>;IGNORE;IGNORE;IGNORE;IGNORE
+\xaf	<Weight_1876>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb0	<Weight_2570>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb1	<Weight_2071>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb2	<Weight_3123>;IGNORE;<Weight_14>;IGNORE;IGNORE
+\xb3	<Weight_3142>;IGNORE;<Weight_14>;IGNORE;IGNORE
+\xb4	<Weight_1877>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb5	<Weight_2571>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb6	<Weight_2572>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb7	<Weight_2573>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb8	<Weight_1878>;IGNORE;IGNORE;IGNORE;IGNORE
+\xb9	<Weight_3105>;IGNORE;<Weight_14>;IGNORE;IGNORE
+\xba	<Weight_3708>;<Weight_3>;<Weight_14>;IGNORE;IGNORE
+\xbb	<Weight_2074>;IGNORE;IGNORE;IGNORE;IGNORE
+\xbc	<Weight_3093>;IGNORE;IGNORE;IGNORE;IGNORE
+\xbd	<Weight_3097>;IGNORE;IGNORE;IGNORE;IGNORE
+\xbe	<Weight_3101>;IGNORE;IGNORE;IGNORE;IGNORE
+\xbf	<Weight_1879>;IGNORE;IGNORE;IGNORE;IGNORE
+\xc0	<Weight_3586>;<Weight_15>;<Weight_18>;IGNORE;IGNORE
+\xc1	<Weight_3586>;<Weight_14>;<Weight_18>;IGNORE;IGNORE
+\xc2	<Weight_3586>;<Weight_18>;<Weight_18>;IGNORE;IGNORE
+\xc3	<Weight_3586>;<Weight_25>;<Weight_18>;IGNORE;IGNORE
+\xc4	<Weight_3586>;<Weight_19>;<Weight_18>;IGNORE;IGNORE
+\xc5	<Weight_3586>;<Weight_26>;<Weight_18>;IGNORE;IGNORE
+\xc6	"\x41\x45";IGNORE;"\x41\x41";IGNORE;IGNORE
+\xc7	<Weight_3594>;<Weight_28>;<Weight_18>;IGNORE;IGNORE
+\xc8	<Weight_3617>;<Weight_15>;<Weight_18>;IGNORE;IGNORE
+\xc9	<Weight_3617>;<Weight_14>;<Weight_18>;IGNORE;IGNORE
+\xca	<Weight_3617>;<Weight_18>;<Weight_18>;IGNORE;IGNORE
+\xcb	<Weight_3617>;<Weight_19>;<Weight_18>;IGNORE;IGNORE
+\xcc	<Weight_3634>;<Weight_15>;<Weight_18>;IGNORE;IGNORE
+\xcd	<Weight_3634>;<Weight_14>;<Weight_18>;IGNORE;IGNORE
+\xce	<Weight_3634>;<Weight_18>;<Weight_18>;IGNORE;IGNORE
+\xcf	<Weight_3634>;<Weight_19>;<Weight_18>;IGNORE;IGNORE
+\xd0	<Weight_3610>;<Weight_104>;<Weight_18>;IGNORE;IGNORE
+\xd1	<Weight_3696>;<Weight_25>;<Weight_18>;IGNORE;IGNORE
+\xd2	<Weight_3708>;<Weight_15>;<Weight_18>;IGNORE;IGNORE
+\xd3	<Weight_3708>;<Weight_14>;<Weight_18>;IGNORE;IGNORE
+\xd4	<Weight_3708>;<Weight_18>;<Weight_18>;IGNORE;IGNORE
+\xd5	<Weight_3708>;<Weight_25>;<Weight_18>;IGNORE;IGNORE
+\xd6	<Weight_3708>;<Weight_19>;<Weight_18>;IGNORE;IGNORE
+\xd7	<Weight_2076>;IGNORE;IGNORE;IGNORE;IGNORE
+\xd8	<Weight_3708>;<Weight_33>;<Weight_18>;IGNORE;IGNORE
+\xd9	<Weight_3743>;<Weight_15>;<Weight_18>;IGNORE;IGNORE
+\xda	<Weight_3743>;<Weight_14>;<Weight_18>;IGNORE;IGNORE
+\xdb	<Weight_3743>;<Weight_18>;<Weight_18>;IGNORE;IGNORE
+\xdc	<Weight_3743>;<Weight_19>;<Weight_18>;IGNORE;IGNORE
+\xdd	<Weight_3751>;<Weight_14>;<Weight_18>;IGNORE;IGNORE
+\xde	"\x54\x48";IGNORE;"\x41\x41";IGNORE;IGNORE
+\xdf	"\x53\x53";IGNORE;IGNORE;IGNORE;IGNORE
+\xe0	<Weight_3586>;<Weight_15>;IGNORE;IGNORE;IGNORE
+\xe1	<Weight_3586>;<Weight_14>;IGNORE;IGNORE;IGNORE
+\xe2	<Weight_3586>;<Weight_18>;IGNORE;IGNORE;IGNORE
+\xe3	<Weight_3586>;<Weight_25>;IGNORE;IGNORE;IGNORE
+\xe4	<Weight_3586>;<Weight_19>;IGNORE;IGNORE;IGNORE
+\xe5	<Weight_3586>;<Weight_26>;IGNORE;IGNORE;IGNORE
+\xe6	"\x41\x45";IGNORE;IGNORE;IGNORE;IGNORE
+\xe7	<Weight_3594>;<Weight_28>;IGNORE;IGNORE;IGNORE
+\xe8	<Weight_3617>;<Weight_15>;IGNORE;IGNORE;IGNORE
+\xe9	<Weight_3617>;<Weight_14>;IGNORE;IGNORE;IGNORE
+\xea	<Weight_3617>;<Weight_18>;IGNORE;IGNORE;IGNORE
+\xeb	<Weight_3617>;<Weight_19>;IGNORE;IGNORE;IGNORE
+\xec	<Weight_3634>;<Weight_15>;IGNORE;IGNORE;IGNORE
+\xed	<Weight_3634>;<Weight_14>;IGNORE;IGNORE;IGNORE
+\xee	<Weight_3634>;<Weight_18>;IGNORE;IGNORE;IGNORE
+\xef	<Weight_3634>;<Weight_19>;IGNORE;IGNORE;IGNORE
+\xf0	<Weight_3610>;<Weight_104>;IGNORE;IGNORE;IGNORE
+\xf1	<Weight_3696>;<Weight_25>;IGNORE;IGNORE;IGNORE
+\xf2	<Weight_3708>;<Weight_15>;IGNORE;IGNORE;IGNORE
+\xf3	<Weight_3708>;<Weight_14>;IGNORE;IGNORE;IGNORE
+\xf4	<Weight_3708>;<Weight_18>;IGNORE;IGNORE;IGNORE
+\xf5	<Weight_3708>;<Weight_25>;IGNORE;IGNORE;IGNORE
+\xf6	<Weight_3708>;<Weight_19>;IGNORE;IGNORE;IGNORE
+\xf7	<Weight_2077>;IGNORE;IGNORE;IGNORE;IGNORE
+\xf8	<Weight_3708>;<Weight_33>;IGNORE;IGNORE;IGNORE
+\xf9	<Weight_3743>;<Weight_15>;IGNORE;IGNORE;IGNORE
+\xfa	<Weight_3743>;<Weight_14>;IGNORE;IGNORE;IGNORE
+\xfb	<Weight_3743>;<Weight_18>;IGNORE;IGNORE;IGNORE
+\xfc	<Weight_3743>;<Weight_19>;IGNORE;IGNORE;IGNORE
+\xfd	<Weight_3751>;<Weight_14>;IGNORE;IGNORE;IGNORE
+\xfe	"\x54\x48";IGNORE;IGNORE;IGNORE;IGNORE
+\xff	<Weight_3751>;<Weight_19>;IGNORE;IGNORE;IGNORE
+order_end
+
+END LC_COLLATE

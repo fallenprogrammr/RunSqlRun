@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DA50A26-6363-4AAD-A3FA-1DC3D87EF980}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InformixRunner</RootNamespace>
+    <AssemblyName>InformixRunner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBM.Data.Informix, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\temp\informix\bin\IBM.Data.Informix.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Runner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RunSqlRun\RunSqlRun.csproj">
+      <Project>{5359bdbe-93d4-4960-bd30-b273db5acdd1}</Project>
+      <Name>RunSqlRun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlRunner\Runner.csproj">
+      <Project>{E1D6847A-0E1E-4A91-986A-3E3BB36302BC}</Project>
+      <Name>Runner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="en_us\IBM.Data.Informix.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InformixBinaries\bin\esqlauth.dll" />
+    <Content Include="InformixBinaries\bin\IBM.Data.IfxTrace.dll" />
+    <Content Include="InformixBinaries\bin\IBM.Data.Informix.dll" />
+    <Content Include="InformixBinaries\bin\iclit09b.dll" />
+    <Content Include="InformixBinaries\bin\idmit09a.dll" />
+    <Content Include="InformixBinaries\bin\idsnt09a.dll" />
+    <Content Include="InformixBinaries\bin\IfmxConn.dll" />
+    <Content Include="InformixBinaries\bin\IfxDotNetIntrinsicModule.dll" />
+    <Content Include="InformixBinaries\bin\ifxoledbc.dll" />
+    <Content Include="InformixBinaries\bin\igl4n304.dll" />
+    <Content Include="InformixBinaries\bin\iglxn304.dll" />
+    <Content Include="InformixBinaries\bin\igo4n304.dll" />
+    <Content Include="InformixBinaries\bin\irclt09b.dll" />
+    <Content Include="InformixBinaries\bin\iregt07b.dll" />
+    <Content Include="InformixBinaries\bin\irfnt09a.dll" />
+    <Content Include="InformixBinaries\bin\irrgt09a.dll" />
+    <Content Include="InformixBinaries\bin\irset09a.dll" />
+    <Content Include="InformixBinaries\bin\isqlt07c.dll" />
+    <Content Include="InformixBinaries\bin\isqlt09a.dll" />
+    <Content Include="InformixBinaries\gls\dll\64-glu48.dll" />
+    <Content Include="InformixBinaries\gls\dll\64-icudt48.dll" />
+    <Content Include="InformixBinaries\gls\dll\64-icuin48.dll" />
+    <Content Include="InformixBinaries\gls\dll\64-icuuc48.dll" />
+    <Content Include="InformixBinaries\msg\en_us\IBM.Data.Informix.xml" />
+    <Content Include="InformixBinaries\msg\en_us\ifxvsmsg.xml" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InformixBinaries\gls\cm3\0333.cmo" />
+    <None Include="InformixBinaries\gls\cm3\04e4.cmo" />
+    <None Include="InformixBinaries\gls\cm3\e005.cmo" />
+    <None Include="InformixBinaries\gls\cm3\registry" />
+    <None Include="InformixBinaries\gls\cv9\033304e4.cvo" />
+    <None Include="InformixBinaries\gls\cv9\0333e005.cvo" />
+    <None Include="InformixBinaries\gls\cv9\04e40333.cvo" />
+    <None Include="InformixBinaries\gls\cv9\04e4e005.cvo" />
+    <None Include="InformixBinaries\gls\cv9\e0050333.cvo" />
+    <None Include="InformixBinaries\gls\cv9\e00504e4.cvo" />
+    <None Include="InformixBinaries\gls\etc\64-dllregistry.48" />
+    <None Include="InformixBinaries\gls\etc\cvtmap" />
+    <None Include="InformixBinaries\gls\etc\icudt48l.dat" />
+    <None Include="InformixBinaries\gls\etc\locmap" />
+    <None Include="InformixBinaries\gls\lc11\en_us\0333.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\0333dict.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\0333dres.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\0333extn.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\04e4.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\04e4dict.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\04e4edic.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\04e4euro.lco" />
+    <None Include="InformixBinaries\gls\lc11\en_us\e005.lco" />
+    <None Include="InformixBinaries\gls\lc11\os\english" />
+    <None Include="InformixBinaries\gls\lc11\os\english-usa" />
+    <None Include="InformixBinaries\gls\lc11\os\english-usa.lc" />
+    <None Include="InformixBinaries\msg\citoxmsg.pam" />
+    <None Include="InformixBinaries\msg\cli3xmsg.pam" />
+    <None Include="InformixBinaries\msg\clixmsg.pam" />
+    <None Include="InformixBinaries\msg\en_us\0333\dbacc.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\dbacc.lmk" />
+    <None Include="InformixBinaries\msg\en_us\0333\dbised.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\dbised.lmk" />
+    <None Include="InformixBinaries\msg\en_us\0333\isam.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\itoxmsg.pam" />
+    <None Include="InformixBinaries\msg\en_us\0333\menukey.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\netsrv.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\os.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\rds.iem" />
+    <None Include="InformixBinaries\msg\en_us\0333\sql.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cals.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\ccals.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\ccsm.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\ccss.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\ceami.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cisam.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cli.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cmiapi.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cmls2.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cnals.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cnerm.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cnet.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cnetsrv.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\coptical.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\crds.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\csecure.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cshell.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\csm.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\csql.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\csqli.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\css.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cutil.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cxopen.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\cxps.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\dbacc.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\dbacc.lmk" />
+    <None Include="InformixBinaries\msg\en_us\04e4\dbised.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\dbised.lmk" />
+    <None Include="InformixBinaries\msg\en_us\04e4\eami.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\errmess.chm" />
+    <None Include="InformixBinaries\msg\en_us\04e4\errmess.gid" />
+    <None Include="InformixBinaries\msg\en_us\04e4\esqlexe.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\isam.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\itoxmsg.pam" />
+    <None Include="InformixBinaries\msg\en_us\04e4\menukey.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\miapi.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\mls2.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\nals.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\necc.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\nerm.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\nesql.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\net.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\netsrv.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\nls.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\optical.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\os.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\password.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\rds.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\rdsterm.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\sblob.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\secure.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\shell.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\sql.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\sqli.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\util.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\xopen.iem" />
+    <None Include="InformixBinaries\msg\en_us\04e4\xps.iem" />
+    <None Include="InformixBinaries\SetupClient.cmd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
